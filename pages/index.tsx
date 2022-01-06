@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useSession, signIn, signOut } from "next-auth/react"
 import LoginButton from 'components/LoginButton'
+import type { NextPage } from 'next'
+import { signOut, useSession } from 'next-auth/react'
 
 const Home: NextPage = () => {
   const { data: session } = useSession()
@@ -10,7 +9,7 @@ const Home: NextPage = () => {
     return (
       <>
         Signed in as {session.user?.email} <br />
-        <button  onClick={() => signOut()}>Sign out</button>
+        <button onClick={() => signOut()}>Sign out</button>
       </>
     )
   }
