@@ -1,6 +1,6 @@
 import { signIn } from "next-auth/react"
 
-export default function LoginButton () {
+export function LoginButton () {
   const handleClick = () => signIn('github')
 
   return (
