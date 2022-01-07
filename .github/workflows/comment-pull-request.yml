@@ -14,7 +14,5 @@ jobs:
         uses: thollander/actions-comment-pull-request@v1
 
         with:
-          message: "Thanks for contributing to vota.dev! <img class="footer-emote" src="/images/midudev-this-is-fine.png" decoding="async" width="36" alt="This is fine Midudev logo"> 
-          
-          don't forget to join our discord server: https://discord.gg/midudev 🔥"
+          message: "Thanks for contributing to vota.dev! <img src="https://midu.dev/images/midudev-this-is-fine.png" width="36" alt="This is fine Midudev logo"/> \n  don't forget to join our discord server: https://discord.gg/midudev 🔥"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
