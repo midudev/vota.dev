@@ -11,7 +11,7 @@ This is a work in progress!
 ## Development
 
 1. Install the project with `npm install`
-2. Initialize the `@prisme/client` with `npm prisma generate`
+2. Initialize the `@prisma/client` with `npm prisma generate`
 3. Set-up your environment variables following the `.env.example` file. NOTE: The environment file must be named like: `.env`
     - You can get the `GITHUB_ID` and `GITHUB_SECRET` following [GitHub - Set-Up an OAuth Application](#github-set-up-an-oauth-application)
     - You can get the `DATABASE_URL` following [Using Railway](#using-railway)
