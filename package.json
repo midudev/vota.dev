@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:db": "docker-compose up db"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.1",
