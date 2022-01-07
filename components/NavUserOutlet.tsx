@@ -7,12 +7,11 @@ export function NavUserOutlet () {
   const { data: session, status } = useSession()
   console.log(session)
 
-
-  if (status === "loading") return <LoadingIcon />
-  if (status === "unauthenticated" || session == null) return <LoginButton />
+  if (status === 'loading') return <LoadingIcon />
+  if (status === 'unauthenticated' || session == null) return <LoginButton />
 
   return <>
     Signed in as {session.user?.email} <br />
-    <button  onClick={() => signOut()}>Sign out</button>
+    <button onClick={() => signOut()}>Sign out</button>
   </>
 }
