@@ -1,7 +1,7 @@
 import { signIn } from "next-auth/react"
 
 export function LoginButton() {
-  const handleClick = async () => await signIn("github", { redirect: false })
+  const handleClick = () => signIn("github", { redirect: false })
 
   return (
     <button
