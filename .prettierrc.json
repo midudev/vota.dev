@@ -1,6 +1,6 @@
 {
-  "trailingComma": "es5",
+  "trailingComma": "none",
   "semi": false,
-  "singleQuote": false,
+  "singleQuote": true,
   "tabs": false
 }
