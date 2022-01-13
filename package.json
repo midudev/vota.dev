@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "docker:db": "docker-compose up db"
+    "docker:db": "docker-compose up db",
+    "migrate:dev": "npx prisma migrate dev --name init",
+    "migrate:deploy": "npx prisma migrate deploy"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.1",
