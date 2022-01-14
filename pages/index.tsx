@@ -17,11 +17,10 @@ interface BoxProps{
   svg?: ReactElement
 }
 
-const Box = ({image, title, svg}: BoxProps) => 
-<div className='w-1/4'>
+const Box = ({image, title, svg}: BoxProps) => <button className='pointer group'>
   <div className='flex flex-row items-center gap-2 px-8 py-2 border border-gray-200 rounded-3xl '>
-    <figure className='object-contain w-10 h-10 flex'>
-      {svg ? svg : image ? <img className='object-contain w-10 h-10' alt={title} src={image} /> : <SVG.Loading className="animate-spin h-6 w-6 mr-1 place-self-center"/>}
+    <figure className='flex object-contain w-10 h-10'>
+      {svg ? svg : image ? <img className='object-contain w-10 h-10' alt={title} src={image} /> : <SVG.Loading className="w-6 h-6 mr-1 animate-spin place-self-center"/>}
     </figure>
     <div className='mt-4 text-2xl font-semibold text-gray-700'>
       {title}
@@ -61,7 +60,7 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Mejor framework Backend</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Nest/>} title='Nest.js' />
             <Box svg={<SVG.Express/>} title='Express' />
             <Box svg={<SVG.Fastify/>} title='Fastify' />
@@ -79,7 +78,7 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Mejor framework FullStack</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Next/>} title='Next.js' />
             <Box svg={<SVG.Nuxt/>} title='Nuxt' />
             <Box svg={<SVG.Svelte/>} title='SvelteKit' />
@@ -89,7 +88,7 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Mejores empaquetadores de código</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Webpack/>} title='Webpack' />
             <Box svg={<SVG.Rollup/>} title='Rollup' />
             <Box svg={<SVG.Parcel/>} title='Parcel' />
@@ -98,40 +97,40 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Mejor entorno de ejecución de JavaScript</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Node/>} title='Node.js' />
             <Box svg={<SVG.Deno/>} title='Deno' />
           </ul>
 
           <SectionTitle>Mejor librería CSS en JS</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Stitches/>} title='Stitches' />
             <Box svg={<SVG.StyledComponents/>} title='Styled Components' />
             <Box image='Emotion.png' title='Emotion' />
           </ul>
 
           <SectionTitle>Mejor framework CSS</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Tailwind/>}title='Tailwind' />
             <Box svg={<SVG.Bulma/>} title='Bulma' />
           </ul>
 
           <SectionTitle>Mejor herramienta de testing</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Jest/>} title='Jest' />
             <Box image='TestingLibrary.png' title='Testing Library' />
             <Box svg={<SVG.Vitest/>} title='Vitest' />
           </ul>
 
           <SectionTitle>Mejor test E2E</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Cypress/>} title='Cypress' />
             <Box svg={<SVG.Playwright/>} title='Playwright' />
             <Box svg={<SVG.Puppeteer/>} title='Puppeteer' />
           </ul>
 
           <SectionTitle>Mejor BaaS (Backend as a Service)</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Firebase/>} title='Firebase' />
             <Box svg={<SVG.Supabase/>} title='Supabase' />
             <Box svg={<SVG.Airtable/>} title='Airtable' />
@@ -140,7 +139,7 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Mejor catálogo de componentes</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box image='Chakra.png' title='Chakra UI' />
             <Box svg={<SVG.MaterialUI/>} title='Material UI' />
             <Box svg={<SVG.Next/>} title='Next UI' />
@@ -150,7 +149,7 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>Mejor sitio para hosting de tu proyecto web</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
             <Box svg={<SVG.Vercel/>}title='Vercel' />
             <Box svg={<SVG.Netlify/>} title='Netlify' />
             <Box image='Render.webp' title='Render' />
