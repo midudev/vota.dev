@@ -5,7 +5,7 @@ interface LogoProps {
 }
 
 export const Logo = ({ size = "small" }:  LogoProps) => (
-  <div className='relative w-12'>
+  <a href='/' className='relative w-12 transition-opacity hover:opacity-50'>
     {logo}
-  </div>
+  </a>
 )

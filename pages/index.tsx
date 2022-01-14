@@ -15,25 +15,19 @@ interface BoxProps{
   title: string
 }
 
-const BoxBox = ({image, title}: BoxProps) => <div>
-  <div className='flex flex-col items-center justify-center py-4 border border-gray-200 rounded'>
-    <div className='w-16 h-16'>
-      <img alt={title} src={image} />
+const Box = ({image, title}: BoxProps) => <button className='group'>
+  <div className='relative flex flex-col items-center justify-center py-4 rounded shadow-blue-400 group pointer'>
+    <div className='absolute transition-all opacity-50 top-5 blur-2xl group-hover:opacity-80'>
+      <img className='z-10 w-24' alt={title} src={image} />
     </div>
-    <div className='mt-4 text-lg font-bold'>
-      {title}
-    </div>
-  </div>
-</div>
+    
+    <img className='z-10 w-24 h-24 transition-transform group-hover:scale-125 group-hover:-translate-y-3' alt={title} src={image} />
 
-const Box = ({image, title}: BoxProps) => <div>
-  <div className='flex flex-row items-center gap-2 px-8 py-2 border border-gray-200 rounded-3xl'>
-    <img className='object-contain w-10 h-10' alt={title} src={image} />
-    <div className='text-lg font-bold'>
+    <div className='mt-4 text-2xl font-semibold text-gray-700'>
       {title}
     </div>
   </div>
-</div>
+</button>
 
 const Home: NextPage = () => {
 
@@ -43,7 +37,7 @@ const Home: NextPage = () => {
         <title>🗳 vota.dev - Vota los mejores del año en el mundo del desarrollo web</title>
       </Head>
       <Header />
-      <section className='mt-40'>
+      <section className='mt-32'>
         <h1 className='max-w-5xl mx-auto font-extrabold text-center text-black text-8xl'>
           Vota los mejores del desarrollo web
         </h1>
@@ -53,26 +47,12 @@ const Home: NextPage = () => {
 
         <div className='max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg'>
           <SectionTitle>Mejor biblioteca UI</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12'>
+          <ul className='grid grid-cols-4 gap-4 mb-12'>
             <Box image='react.svg' title='React' />
             <Box image='vue.svg' title='Vue.js' />
             <Box image='angular.svg' title='Angular' />
             <Box image='svelte.svg' title='Svelte' />
             <Box image='lit.svg' title='Lit' />
-            {/* <Box image='.svg' title='Ember' />
-            <Box image='.svg' title='Alpine.js' />
-            <Box image='.svg' title='Preact' />
-            <Box image='.svg' title='Stimulus' />
-            <Box image='.svg' title='Solid' /> */}
-          </ul>
-
-          <SectionTitle>Mejor biblioteca UI</SectionTitle>
-          <ul className='grid grid-cols-4 gap-4 mb-12'>
-            <BoxBox image='react.svg' title='React' />
-            <BoxBox image='vue.svg' title='Vue.js' />
-            <BoxBox image='angular.svg' title='Angular' />
-            <BoxBox image='svelte.svg' title='Svelte' />
-            <BoxBox image='lit.svg' title='Lit' />
             {/* <Box image='.svg' title='Ember' />
             <Box image='.svg' title='Alpine.js' />
             <Box image='.svg' title='Preact' />
