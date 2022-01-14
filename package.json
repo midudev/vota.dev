@@ -1,6 +1,8 @@
 {
   "name": "vota.dev",
   "private": true,
+  "author": "midudev",
+  "description": "vote.dev es un proyecto de la comunidad para la comunidad, en la que podras votar las mejores tecnologías web del año.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
