@@ -17,32 +17,17 @@ interface BoxProps{
   svg?: ReactElement
 }
 
-
-const BoxBox = ({image = '', title, svg}: BoxProps) => 
-<div >
-  <div className='flex flex-col items-center justify-center py-4 border border-gray-200 rounded'>
-    <div className='w-16 h-16'>
-      <figure className='flex'>
-        {svg ? svg : image ? <img alt={title} src={image} /> : <SVG.Loading className="animate-spin h-100 w-100 mr-1 place-self-center"/>} 
-      </figure>
-    </div>
-    <div className='mt-4 text-lg font-bold'>
-      {title}
-    </div>
-  </div>
-</div>
-
 const Box = ({image, title, svg}: BoxProps) => 
 <div className='w-1/4'>
   <div className='flex flex-row items-center gap-2 px-8 py-2 border border-gray-200 rounded-3xl '>
     <figure className='object-contain w-10 h-10 flex'>
       {svg ? svg : image ? <img className='object-contain w-10 h-10' alt={title} src={image} /> : <SVG.Loading className="animate-spin h-6 w-6 mr-1 place-self-center"/>}
     </figure>
-    <div className='text-lg font-bold'>
+    <div className='mt-4 text-2xl font-semibold text-gray-700'>
       {title}
     </div>
   </div>
-</div>
+</button>
 
 const Home: NextPage = () => {
 
@@ -52,7 +37,7 @@ const Home: NextPage = () => {
         <title>🗳 vota.dev - Vota los mejores del año en el mundo del desarrollo web</title>
       </Head>
       <Header />
-      <section className='mt-40'>
+      <section className='mt-32'>
         <h1 className='max-w-5xl mx-auto font-extrabold text-center text-black text-8xl'>
           Vota los mejores del desarrollo web
         </h1>
@@ -62,26 +47,12 @@ const Home: NextPage = () => {
 
         <div className='max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg'>
           <SectionTitle>Mejor biblioteca UI</SectionTitle>
-          <ul className='flex flex-wrap gap-4 mb-12 m-auto place-content-center'>
+          <ul className='grid grid-cols-4 gap-4 mb-12'>
             <Box svg={<SVG.React/>} title='React' />
             <Box svg={<SVG.Vue/>} title='Vue.js' />
             <Box svg={<SVG.Angular/>} title='Angular' />
             <Box svg={<SVG.Svelte/>} title='Svelte' />
             <Box svg={<SVG.Lit/>} title='Lit' />
-            {/* <Box svg={<SVG.Ember/>} title='Ember' />
-            <Box svg={<SVG.Alpine/>} title='Alpine.js' />
-            <Box svg={<SVG.Preact/>} title='Preact' />
-            <Box svg={<SVG.Stimulus/>} title='Stimulus' />
-            <Box svg={<SVG.Solid/>} title='Solid' /> */}
-          </ul>
-
-          <SectionTitle>Mejor biblioteca UI</SectionTitle>
-          <ul className='grid grid-cols-4 gap-4 mb-12'>
-            <BoxBox svg={<SVG.React/>} title='React'/>
-            <BoxBox image='vue.svg' title='Vue.js' />
-            <BoxBox svg={<SVG.Angular/>}title='Angular' />
-            <BoxBox image='svelte.svg' title='Svelte' />
-            <BoxBox svg={<SVG.Lit/>} title='Lit' />
             {/* <Box svg={<SVG.Ember/>} title='Ember' />
             <Box svg={<SVG.Alpine/>} title='Alpine.js' />
             <Box svg={<SVG.Preact/>} title='Preact' />
