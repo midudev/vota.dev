@@ -3,6 +3,8 @@ import { LoadingIcon } from "components/LoadingIcon"
 import { LoginButton } from "components/LoginButton"
 import { signOut, useSession } from "next-auth/react"
 import { useRouter } from 'next/router'
+import { useSession } from "next-auth/react"
+import { NavUserProfile } from './NavUserProfile'
 
 export function NavUserOutlet() {
   const { data: session, status } = useSession()
@@ -10,7 +12,7 @@ export function NavUserOutlet() {
 
   if (status === "loading") return <LoadingIcon />
   if (status === "unauthenticated" || session == null) return <LoginButton />
-  
+
   const handleSignOut = async () => {
     const data = await signOut({ redirect: false })
     return router.push(data.url)
@@ -22,4 +24,7 @@ export function NavUserOutlet() {
       <button onClick={handleSignOut}>Sign out</button>
     </>
   )
+  if (session.user != null) return <NavUserProfile user={session.user} />
+
+  return null
 }
