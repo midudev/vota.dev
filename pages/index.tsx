@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           Vota los mejores del desarrollo web
         </h1>
         <p className='max-w-lg mx-auto mt-10 text-2xl text-center text-black opacity-70'>
-          Decide qué stack, tecnologías y frameworks han sido los mejores del año. ¡Cada voto, cuenta!
+          Decide qué stack, tecnologías y frameworks han sido los mejores del año. ¡Cada voto cuenta!
         </p>
 
         <div className='max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg'>
