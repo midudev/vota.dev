@@ -1,7 +1,13 @@
 import { ReactElement } from 'react'
 import * as SVG from 'components/SVGIcons'
 
-const VotePillImage = ({ svg, title, image }: any) => {
+interface VotePillProps {
+  image?: string
+  title?: string
+  svg?: ReactElement
+}
+
+const VotePillImage = ({ svg, title, image }: VotePillProps) => {
   if (svg) return svg
   if (image)
     return <img className="object-contain w-10 h-10" alt={title} src={image} />
@@ -9,11 +15,6 @@ const VotePillImage = ({ svg, title, image }: any) => {
   return <SVG.Loading className="w-6 h-6 mr-1 animate-spin place-self-center" />
 }
 
-interface VotePillProps {
-  image?: string
-  title?: string
-  svg?: ReactElement
-}
 
 export const VotePill = ({ image, title, svg }: VotePillProps) => {
   return (
