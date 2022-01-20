@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'yellow-js': '#f7df1e',
+        midu : '#129BFC',
+        'midu-light': '#199afc',
+        'midu-dark' : '#1D5682',
       }
     }
   },
