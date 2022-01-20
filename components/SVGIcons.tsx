@@ -1,7 +1,7 @@
 /*
 INFO: Como Usar?
 INFO: import * as SVG from "components/SVGIcons"
-INFO: <SVG.React className="h-6 w-6 mr-1" />
+INFO: <SVG.React className="w-6 h-6 mr-1" />
 
 Con el props?:{} se le puede pasar otras propiedades pero no estoy seguro si sea lo mejor o definir de una vez las demás propiedades como 'className?: string', no se casi nada de TypeScript, ni de react y ni de las demás cosas que se están usando pero ahí le damos! xddd
 
@@ -1239,9 +1239,6 @@ export const GoogleCloud = (svgprops?: svgProps) => (
   <svg
     {...svgprops}
     viewBox="0 0 2385.7 1919.9"
-    style={{
-      enableBackground: "new 0 0 2385.7 1919.9", /* Aqui molesta el Linter*/
-    }}
     xmlSpace="preserve"
   >
     <path
