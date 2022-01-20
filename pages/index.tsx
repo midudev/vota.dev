@@ -1,15 +1,10 @@
-import { Box } from 'components/box'
 import { Header } from 'components/Header'
-import React from 'react'
-import { VotePill } from 'components/VotePill'
+import { SectionTitle } from 'components/sectionTitle'
 import * as SVG from "components/SVGIcons"
-
-interface SectionTitleProps {
-  children?: string
-}
-
-const SectionTitle = ({children}: SectionTitleProps) =>
-  <h2 className='mb-6 text-4xl font-bold text-center'>{children}</h2>
+import { VotePill } from 'components/VotePill'
+import { NextPage } from 'next'
+import Head from 'next/head'
+import React from 'react'
 
 const Home: NextPage = () => {
 
