@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header } from 'components/Header'
-import React, { ReactElement } from 'react'
+import React from 'react'
+import { VotePill } from 'components/VotePill'
 import * as SVG from "components/SVGIcons"
 
 interface SectionTitleProps {
@@ -11,38 +12,7 @@ interface SectionTitleProps {
 const SectionTitle = ({children}: SectionTitleProps) =>
   <h2 className='mb-6 text-4xl font-bold text-center'>{children}</h2>
 
-interface BoxProps{
-  image?: string,
-  title?: string
-  svg?: ReactElement
-}
 
-const Box = ({image, title, svg}: BoxProps) => {
-  const getPictureElement = () => {
-    if (svg) return svg
-    if (image)
-      return (
-        <img className="object-contain w-10 h-10" alt={title} src={image} />
-      )
-
-    return (
-      <SVG.Loading className="w-6 h-6 mr-1 animate-spin place-self-center" />
-    )
-  }
-
-  const pictureElement = getPictureElement()
-
-  return (
-    <button className="pointer group">
-      <div className="flex flex-row items-center gap-2 px-8 py-3 border border-gray-200 rounded-3xl ">
-        <figure className="flex object-contain w-10 h-10">
-          {pictureElement}
-        </figure>
-        <div className="text-2xl font-semibold text-gray-700">{title}</div>
-      </div>
-    </button>
-  )
-}
 
 const Home: NextPage = () => {
 
@@ -63,24 +33,24 @@ const Home: NextPage = () => {
         <div className='max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg'>
           <SectionTitle>Mejor biblioteca UI</SectionTitle>
           <ul className='grid grid-cols-4 gap-4 mb-12'>
-            <Box svg={<SVG.React/>} title='React' />
-            <Box svg={<SVG.Vue/>} title='Vue.js' />
-            <Box svg={<SVG.Angular/>} title='Angular' />
-            <Box svg={<SVG.Svelte/>} title='Svelte' />
-            <Box svg={<SVG.Lit/>} title='Lit' />
-            {/* <Box svg={<SVG.Ember/>} title='Ember' />
-            <Box svg={<SVG.Alpine/>} title='Alpine.js' />
-            <Box svg={<SVG.Preact/>} title='Preact' />
-            <Box svg={<SVG.Stimulus/>} title='Stimulus' />
-            <Box svg={<SVG.Solid/>} title='Solid' /> */}
+            <VotePill svg={<SVG.React/>} title='React' />
+            <VotePill svg={<SVG.Vue/>} title='Vue.js' />
+            <VotePill svg={<SVG.Angular/>} title='Angular' />
+            <VotePill svg={<SVG.Svelte/>} title='Svelte' />
+            <VotePill svg={<SVG.Lit/>} title='Lit' />
+            {/* <VotePill svg={<SVG.Ember/>} title='Ember' />
+            <VotePill svg={<SVG.Alpine/>} title='Alpine.js' />
+            <VotePill svg={<SVG.Preact/>} title='Preact' />
+            <VotePill svg={<SVG.Stimulus/>} title='Stimulus' />
+            <VotePill svg={<SVG.Solid/>} title='Solid' /> */}
           </ul>
 
           <SectionTitle>Mejor framework Backend</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Nest/>} title='Nest.js' />
-            <Box svg={<SVG.Express/>} title='Express' />
-            <Box svg={<SVG.Fastify/>} title='Fastify' />
-            <Box svg={<SVG.Hapi/>} title='Hapi' />
+            <VotePill svg={<SVG.Nest/>} title='Nest.js' />
+            <VotePill svg={<SVG.Express/>} title='Express' />
+            <VotePill svg={<SVG.Fastify/>} title='Fastify' />
+            <VotePill svg={<SVG.Hapi/>} title='Hapi' />
           </ul>
 
           <SectionTitle>Mejor nueva funcionalidad ECMAScript</SectionTitle>
@@ -95,83 +65,83 @@ const Home: NextPage = () => {
 
           <SectionTitle>Mejor framework FullStack</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Next/>} title='Next.js' />
-            <Box svg={<SVG.Nuxt/>} title='Nuxt' />
-            <Box svg={<SVG.Svelte/>} title='SvelteKit' />
-            <Box svg={<SVG.Remix/>} title='Remix' />
-            <Box svg={<SVG.Astro/>} title='Astro' />
-            <Box svg={<SVG.Blitz/>} title='BlitzJS' />
+            <VotePill svg={<SVG.Next/>} title='Next.js' />
+            <VotePill svg={<SVG.Nuxt/>} title='Nuxt' />
+            <VotePill svg={<SVG.Svelte/>} title='SvelteKit' />
+            <VotePill svg={<SVG.Remix/>} title='Remix' />
+            <VotePill svg={<SVG.Astro/>} title='Astro' />
+            <VotePill svg={<SVG.Blitz/>} title='BlitzJS' />
           </ul>
 
           <SectionTitle>Mejores empaquetadores de código</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Webpack/>} title='Webpack' />
-            <Box svg={<SVG.Rollup/>} title='Rollup' />
-            <Box svg={<SVG.Parcel/>} title='Parcel' />
-            <Box svg={<SVG.Esbuild/>} title='EsBuild' />
-            <Box svg={<SVG.Vite/>} title='Vite' />
+            <VotePill svg={<SVG.Webpack/>} title='Webpack' />
+            <VotePill svg={<SVG.Rollup/>} title='Rollup' />
+            <VotePill svg={<SVG.Parcel/>} title='Parcel' />
+            <VotePill svg={<SVG.Esbuild/>} title='EsBuild' />
+            <VotePill svg={<SVG.Vite/>} title='Vite' />
           </ul>
 
           <SectionTitle>Mejor entorno de ejecución de JavaScript</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Node/>} title='Node.js' />
-            <Box svg={<SVG.Deno/>} title='Deno' />
+            <VotePill svg={<SVG.Node/>} title='Node.js' />
+            <VotePill svg={<SVG.Deno/>} title='Deno' />
           </ul>
 
           <SectionTitle>Mejor librería CSS en JS</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Stitches/>} title='Stitches' />
-            <Box svg={<SVG.StyledComponents/>} title='Styled Components' />
-            <Box image='Emotion.png' title='Emotion' />
+            <VotePill svg={<SVG.Stitches/>} title='Stitches' />
+            <VotePill svg={<SVG.StyledComponents/>} title='Styled Components' />
+            <VotePill image='Emotion.png' title='Emotion' />
           </ul>
 
           <SectionTitle>Mejor framework CSS</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Tailwind/>}title='Tailwind' />
-            <Box svg={<SVG.Bulma/>} title='Bulma' />
+            <VotePill svg={<SVG.Tailwind/>}title='Tailwind' />
+            <VotePill svg={<SVG.Bulma/>} title='Bulma' />
           </ul>
 
           <SectionTitle>Mejor herramienta de testing</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Jest/>} title='Jest' />
-            <Box image='TestingLibrary.png' title='Testing Library' />
-            <Box svg={<SVG.Vitest/>} title='Vitest' />
+            <VotePill svg={<SVG.Jest/>} title='Jest' />
+            <VotePill image='TestingLibrary.png' title='Testing Library' />
+            <VotePill svg={<SVG.Vitest/>} title='Vitest' />
           </ul>
 
           <SectionTitle>Mejor test E2E</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Cypress/>} title='Cypress' />
-            <Box svg={<SVG.Playwright/>} title='Playwright' />
-            <Box svg={<SVG.Puppeteer/>} title='Puppeteer' />
+            <VotePill svg={<SVG.Cypress/>} title='Cypress' />
+            <VotePill svg={<SVG.Playwright/>} title='Playwright' />
+            <VotePill svg={<SVG.Puppeteer/>} title='Puppeteer' />
           </ul>
 
           <SectionTitle>Mejor BaaS (Backend as a Service)</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Firebase/>} title='Firebase' />
-            <Box svg={<SVG.Supabase/>} title='Supabase' />
-            <Box svg={<SVG.Airtable/>} title='Airtable' />
-            <Box svg={<SVG.Amplify/>} title='Amplify' />
-            <Box svg={<SVG.MongoDB/>} title='Mongo' />
+            <VotePill svg={<SVG.Firebase/>} title='Firebase' />
+            <VotePill svg={<SVG.Supabase/>} title='Supabase' />
+            <VotePill svg={<SVG.Airtable/>} title='Airtable' />
+            <VotePill svg={<SVG.Amplify/>} title='Amplify' />
+            <VotePill svg={<SVG.MongoDB/>} title='Mongo' />
           </ul>
 
           <SectionTitle>Mejor catálogo de componentes</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box image='Chakra.png' title='Chakra UI' />
-            <Box svg={<SVG.MaterialUI/>} title='Material UI' />
-            <Box svg={<SVG.Next/>} title='Next UI' />
-            <Box image='Ant.png' title='Ant Design' />
-            <Box svg={<SVG.DaisyUI/>} title='Daisy UI' />
-            <Box image='ReactSemanticUI.png' title='React Semantic UI' />
+            <VotePill image='Chakra.png' title='Chakra UI' />
+            <VotePill svg={<SVG.MaterialUI/>} title='Material UI' />
+            <VotePill svg={<SVG.Next/>} title='Next UI' />
+            <VotePill image='Ant.png' title='Ant Design' />
+            <VotePill svg={<SVG.DaisyUI/>} title='Daisy UI' />
+            <VotePill image='ReactSemanticUI.png' title='React Semantic UI' />
           </ul>
 
           <SectionTitle>Mejor sitio para hosting de tu proyecto web</SectionTitle>
           <ul className='flex flex-wrap gap-4 m-auto mb-12 place-content-center'>
-            <Box svg={<SVG.Vercel/>}title='Vercel' />
-            <Box svg={<SVG.Netlify/>} title='Netlify' />
-            <Box image='Render.webp' title='Render' />
-            <Box svg={<SVG.AWS/>} title='AWS' />
-            <Box svg={<SVG.Azure/>} title='Azure' />
-            <Box svg={<SVG.GoogleCloud/>} title='Google Cloud' />
+            <VotePill svg={<SVG.Vercel/>}title='Vercel' />
+            <VotePill svg={<SVG.Netlify/>} title='Netlify' />
+            <VotePill image='Render.webp' title='Render' />
+            <VotePill svg={<SVG.AWS/>} title='AWS' />
+            <VotePill svg={<SVG.Azure/>} title='Azure' />
+            <VotePill svg={<SVG.GoogleCloud/>} title='Google Cloud' />
           </ul>
         </div>
       </section>
