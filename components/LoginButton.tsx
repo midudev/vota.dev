@@ -1,7 +1,7 @@
-import { signIn } from "next-auth/react"
+import { signIn } from 'next-auth/react'
 
 export function LoginButton() {
-  const handleClick = () => signIn("github")
+  const handleClick = () => signIn('github')
 
   return (
     <button
