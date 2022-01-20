@@ -5,7 +5,7 @@ export function LoginButton() {
 
   return (
     <button
-      className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+      className="inline-flex items-center px-4 py-2 font-bold text-white bg-black rounded hover:bg-gray-800"
       onClick={handleClick}
     >
       <svg
