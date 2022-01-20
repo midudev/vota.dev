@@ -1,13 +1,31 @@
-# vota.dev
+vota.dev
+========
 
-Welcome to vota.dev!
+<div align="left">
 
-This is a work in progress!
+![](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
+![](https://img.shields.io/badge/Maintained%3F-Yes-brightgreen.svg)
 
-- [vota.dev](#votadev)
+</div>
+
+# Welcome to [vota.dev](https://vota.dev)!
+
+This is a web platform oriented to help worldwide development community. The mainly goal is to give to developement community  a tool where they can find out the state of JS stacks, tools, platforms, libraries and much more and help them to find out which to learn next or use in actual projects.
+
+By survey method we collect data and process it to make the metrics and reports to the community.
+
+Table of Contents
+=================
+
+- [Installation and Deployment](#installation-and-deployment)
   - [Development](#development)
   - [GitHub - Set-Up an OAuth Application](#github---set-up-an-oauth-application)
   - [Using Railway](#using-railway)
+- [Community and Contributions](#community-and-contributions)
+- [Talk with us or Report an Issue](#talk-with-us-or-report-an-issue)
+
+Installation and Documentation
+==============================
 
 ## Development
 
@@ -37,3 +55,13 @@ This is a work in progress!
 4. Claim the project
 5. On 'Environment', click on 'PostgreSQL' then click on 'Connect'
 6. You can retrieve the Postgres Connection URL there
+
+Community and Contributions
+===========================
+
+[vota.dev](https://vota.dev) is a **community-driven open source project**. We are committed to a fully transparent development process and **highly appreciate any contributions**. Whether you are helping us fixing bugs, proposing new feature, improving our documentation or spreading the word - **we would love ❤️&nbsp; to have you as part of the vota.dev community**.
+
+Talk with us or Report an Issue
+===============================
+
+We are really happy to welcome you in the [@midudev](https://twitter.com/midudev) community [Discord channel](https://discord.gg/midudev) 📫&nbsp; or reporting a bug / issue via [Github Issues](https://github.com/midudev/vota.dev/issues) or answer your questions via [GitHub Discussions](https://github.com/midudev/vota.dev/discussions)!
