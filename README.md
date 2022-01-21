@@ -36,7 +36,7 @@ Installation and Documentation
     - You can set in `SECRET` whatever you want or a strong character string like a base64, sha1, etc...
     - You need to uncomment `NEXTAUTH_URL` to remove the warning alert in localhost.
     - You can get the `DATABASE_URL` following [Using Railway](#using-railway)
-4. Migrate the prisma generated database to the PostgreSQL on Railway with `npx prisma migrate dev`
+4. Migrate the prisma generated database to the PostgreSQL on Railway with `npm run migrate:dev`
 5. You can now start developing for vota.dev
 
 ## GitHub - Set-Up an OAuth Application
