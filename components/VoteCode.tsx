@@ -10,8 +10,8 @@ interface VotePillProps {
 export const VoteCode = ({ image, title }: VotePillProps) => {
   return (
     <button className="pointer group">
-      <div className="flex flex-col items-center gap-2 px-8 py-3 rounded-3xl ">
-        <figure className="flex object-contain w-96">
+      <div className="flex flex-col items-center">
+        <figure className="flex object-contain w-full">
           <img className="object-contain w-full" alt={title} src={image} />
         </figure>
         <div className="text-2xl font-semibold text-gray-700">{title}</div>

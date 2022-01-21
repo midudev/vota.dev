@@ -18,3 +18,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* SCROLL BODY */
+body {
+  overflow: scroll;
+  height: 100vh;
+  width: auto;
+  overflow-x: hidden;
+  transition: 1s;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #000000;
+}
