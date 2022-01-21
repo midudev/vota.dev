@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import { useTranslation } from 'hooks/useTranslation'
 
 export function Footer() {
+  const i18n = useTranslation()
+
   return (
     <footer className="flex flex-center justify-center w-full py-12 mt-8 border-t-2 border-t-black">
       <div className="">
@@ -10,8 +13,9 @@ export function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          Desarrollado Por{''}
-          <picture className="flex flex-center bg-white rounded-full ml-2">
+          {i18n.DEVELOPED_BY}
+          {''}
+          <picture className="flex flex-center bg-white rounded-full">
             <Image
               width="92"
               height="28"
@@ -55,7 +59,7 @@ export function Footer() {
           rel="nofollow noreferrer"
           target="_blank"
         >
-          Enviar Sugerencia
+          {i18n.SUBMIT_SUGGESTION}
         </a>
       </div>
     </footer>
