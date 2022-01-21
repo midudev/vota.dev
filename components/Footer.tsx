@@ -3,15 +3,15 @@ import Image from 'next/image'
 export function Footer() {
   return (
     <footer className="flex flex-center justify-center w-full py-12 mt-8 border-t-2 border-t-black">
-      <div className="flex flex-center">
+      <div className="">
         <a
-          className="flex flex-center pr-2 border-dashed border-b-2 border-b-yellow-js hover:border-black"
+          className="flex flex-center pr-2 border-dashed border-b-8 border-b-yellow-js hover:border-black"
           href="https://midu.dev"
           target="_blank"
           rel="noreferrer"
         >
           Desarrollado Por{''}
-          <picture className="flex flex-center bg-white rounded-full">
+          <picture className="flex flex-center bg-white rounded-full ml-2">
             <Image
               width="92"
               height="28"
