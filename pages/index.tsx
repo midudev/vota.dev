@@ -6,14 +6,7 @@ import { VotePill } from 'components/VotePill'
 import { VoteCode } from 'components/VoteCode'
 import * as SVG from 'components/SVGIcons'
 import { useTranslation } from 'hooks/useTranslation'
-
-interface SectionTitleProps {
-  children?: string
-}
-
-const SectionTitle = ({ children }: SectionTitleProps) => (
-  <h2 className="mb-6 text-4xl font-bold text-center">{children}</h2>
-)
+import { SectionTitle } from 'components/sectionTitle'
 
 const Home: NextPage = () => {
   const i18n = useTranslation()
