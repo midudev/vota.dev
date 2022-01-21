@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <section className="mt-32">
-        <h1 className="max-w-5xl mx-auto font-extrabold text-center text-black text-8xl">
+        <h1 className="max-w-5xl mx-auto font-extrabold text-center text-black text-5xl md:text-8xl">
           {i18n.HERO_TITLE}
         </h1>
         <p className="max-w-lg mx-auto mt-10 text-2xl text-center text-black opacity-70">
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
 
         <div className="max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg">
           <SectionTitle>{i18n.ECMA_TITLE}</SectionTitle>
-          <ul className="grid grid-cols-2 m-auto mb-12 place-content-center">
+          <ul className="grid grid-cols-1 md:grid-cols-2 m-auto mb-12 place-content-center">
             <VoteCode
               title="Nullish Coalescing Operator"
               image="es-nullish-coalescing.png"
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
           </ul>
 
           <SectionTitle>{i18n.UI_TITLE}</SectionTitle>
-          <ul className="grid grid-cols-4 gap-4 mb-12">
+          <ul className="grid grid-cols-1  md:grid-cols-4 gap-4 mb-12">
             <VotePill svg={<SVG.ReactIcon />} title="React" />
             <VotePill svg={<SVG.Vue />} title="Vue.js" />
             <VotePill svg={<SVG.Angular />} title="Angular" />
