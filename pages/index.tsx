@@ -2,7 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header } from 'components/Header'
 import { VotePill } from 'components/VotePill'
+import { VoteCode } from 'components/VoteCode'
 import * as SVG from 'components/SVGIcons'
+import { useTranslation } from 'hooks/useTranslation'
 
 interface SectionTitleProps {
   children?: string
@@ -13,24 +15,52 @@ const SectionTitle = ({ children }: SectionTitleProps) => (
 )
 
 const Home: NextPage = () => {
+  const i18n = useTranslation()
+
   return (
     <>
       <Head>
-        <title>
-          🗳 vota.dev - Vota los mejores del año en el mundo del desarrollo web
-        </title>
+        <title>🗳 vota.dev - {i18n.SEO_TITLE}</title>
       </Head>
       <Header />
       <section className="mt-32">
         <h1 className="max-w-5xl mx-auto font-extrabold text-center text-black text-8xl">
-          Vota los mejores del desarrollo web
+          {i18n.HERO_TITLE}
         </h1>
         <p className="max-w-lg mx-auto mt-10 text-2xl text-center text-black opacity-70">
-          Decide qué stack, tecnologías y frameworks han sido los mejores del
-          año. ¡Cada voto cuenta!
+          {i18n.HERO_SUBTITLE}
         </p>
 
         <div className="max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg">
+          <SectionTitle>Mejor nueva funcionalidad ECMAScript</SectionTitle>
+          <ul className="grid grid-cols-2 m-auto mb-12 place-content-center">
+            <VoteCode
+              title="Nullish Coalescing Operator"
+              image="es-nullish-coalescing.png"
+            />
+            <VoteCode
+              title="Nullish Coalescing Operator"
+              image="es-nullish-coalescing.png"
+            />
+            <VoteCode
+              title="Nullish Coalescing Operator"
+              image="es-nullish-coalescing.png"
+            />
+            <VoteCode
+              title="Nullish Coalescing Operator"
+              image="es-nullish-coalescing.png"
+            />
+            <VoteCode
+              title="Nullish Coalescing Operator"
+              image="es-nullish-coalescing.png"
+            />
+            {/* <VoteCode image="es-optional-chaining.png" />
+            <VoteCode image="es-top-level-await.png" />
+            <VoteCode image="es-promise-any.png" />
+            <VoteCode image="es-replace-all.png" />
+            <VoteCode image="es-logical-assignment.png" /> */}
+          </ul>
+
           <SectionTitle>Mejor biblioteca UI</SectionTitle>
           <ul className="grid grid-cols-4 gap-4 mb-12">
             <VotePill svg={<SVG.ReactIcon />} title="React" />
@@ -53,13 +83,8 @@ const Home: NextPage = () => {
             <VotePill svg={<SVG.Hapi />} title="Hapi" />
           </ul>
 
-          <SectionTitle>Mejor nueva funcionalidad ECMAScript</SectionTitle>
-          <ul>
-            <li></li>
-          </ul>
-
           <SectionTitle>Mejor nueva funcionalidad CSS</SectionTitle>
-          <ul>
+          <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
             <li></li>
           </ul>
 
