@@ -4,11 +4,18 @@ import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
 import { VotePill } from 'components/VotePill'
 import { VoteCode } from 'components/VoteCode'
-import * as SVG from 'components/SVGIcons'
 import { useTranslation } from 'hooks/useTranslation'
+import { LIST_SVG_ICONS, EXAMPLES_LIST } from './constants'
 
 interface SectionTitleProps {
   children?: string
+}
+
+interface DataIconsTech {
+  isPng?: boolean
+  iconPng?: string
+  title: string
+  iconSvg?: any
 }
 
 const SectionTitle = ({ children }: SectionTitleProps) => (
@@ -17,6 +24,13 @@ const SectionTitle = ({ children }: SectionTitleProps) => (
 
 const Home: NextPage = () => {
   const i18n = useTranslation()
+
+  const validateTagIcon = ({ isPng, iconPng, title, iconSvg }: DataIconsTech) =>
+    isPng ? (
+      <VotePill image={iconPng} title={title} key={title} />
+    ) : (
+      <VotePill title={title} svg={iconSvg} />
+    )
 
   return (
     <>
@@ -35,53 +49,23 @@ const Home: NextPage = () => {
         <div className="max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg">
           <SectionTitle>{i18n.ECMA_TITLE}</SectionTitle>
           <ul className="grid grid-cols-1 md:grid-cols-2 m-auto mb-12 place-content-center">
-            <VoteCode
-              title="Nullish Coalescing Operator"
-              image="es-nullish-coalescing.png"
-            />
-            <VoteCode
-              title="Nullish Coalescing Operator"
-              image="es-nullish-coalescing.png"
-            />
-            <VoteCode
-              title="Nullish Coalescing Operator"
-              image="es-nullish-coalescing.png"
-            />
-            <VoteCode
-              title="Nullish Coalescing Operator"
-              image="es-nullish-coalescing.png"
-            />
-            <VoteCode
-              title="Nullish Coalescing Operator"
-              image="es-nullish-coalescing.png"
-            />
-            {/* <VoteCode image="es-optional-chaining.png" />
-            <VoteCode image="es-top-level-await.png" />
-            <VoteCode image="es-promise-any.png" />
-            <VoteCode image="es-replace-all.png" />
-            <VoteCode image="es-logical-assignment.png" /> */}
+            {EXAMPLES_LIST.map(({ image, title }) => (
+              <VoteCode title={title} image={image} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.UI_TITLE}</SectionTitle>
           <ul className="grid grid-cols-1  md:grid-cols-4 gap-4 mb-12">
-            <VotePill svg={<SVG.ReactIcon />} title="React" />
-            <VotePill svg={<SVG.Vue />} title="Vue.js" />
-            <VotePill svg={<SVG.Angular />} title="Angular" />
-            <VotePill svg={<SVG.Svelte />} title="Svelte" />
-            <VotePill svg={<SVG.Lit />} title="Lit" />
-            {/* <VotePill svg={<SVG.Ember/>} title='Ember' />
-            <VotePill svg={<SVG.Alpine/>} title='Alpine.js' />
-            <VotePill svg={<SVG.Preact/>} title='Preact' />
-            <VotePill svg={<SVG.Stimulus/>} title='Stimulus' />
-            <VotePill svg={<SVG.Solid/>} title='Solid' /> */}
+            {LIST_SVG_ICONS.UI_LIBRARY_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.BACKEND_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Nest />} title="Nest.js" />
-            <VotePill svg={<SVG.Express />} title="Express" />
-            <VotePill svg={<SVG.Fastify />} title="Fastify" />
-            <VotePill svg={<SVG.Hapi />} title="Hapi" />
+            {LIST_SVG_ICONS.BACKEND_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.CSS_TITLE}</SectionTitle>
@@ -91,86 +75,76 @@ const Home: NextPage = () => {
 
           <SectionTitle>{i18n.FULL_STACK_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Next />} title="Next.js" />
-            <VotePill svg={<SVG.Nuxt />} title="Nuxt" />
-            <VotePill svg={<SVG.Svelte />} title="SvelteKit" />
-            <VotePill svg={<SVG.Remix />} title="Remix" />
-            <VotePill svg={<SVG.Astro />} title="Astro" />
-            <VotePill svg={<SVG.Blitz />} title="BlitzJS" />
+            {LIST_SVG_ICONS.FULL_STACK_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.PACKAGE_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Webpack />} title="Webpack" />
-            <VotePill svg={<SVG.Rollup />} title="Rollup" />
-            <VotePill svg={<SVG.Parcel />} title="Parcel" />
-            <VotePill svg={<SVG.Esbuild />} title="EsBuild" />
-            <VotePill svg={<SVG.Vite />} title="Vite" />
+            {LIST_SVG_ICONS.PACKAGE_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.ENV_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Node />} title="Node.js" />
-            <VotePill svg={<SVG.Deno />} title="Deno" />
+            {LIST_SVG_ICONS.ENVAIROMENT_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.CSS_IN_JS_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Stitches />} title="Stitches" />
-            <VotePill
-              svg={<SVG.StyledComponents />}
-              title="Styled Components"
-            />
-            <VotePill image="Emotion.png" title="Emotion" />
+            {LIST_SVG_ICONS.CSS_IN_JS_LIST.map(
+              ({ iconSvg, title, isPng, iconPng }) =>
+                validateTagIcon({ isPng, iconPng, title, iconSvg })
+            )}
           </ul>
 
           <SectionTitle>{i18n.FRAMEWORK_CSS_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Tailwind />} title="Tailwind" />
-            <VotePill svg={<SVG.Bulma />} title="Bulma" />
+            {LIST_SVG_ICONS.FRAMEWORK_CSS_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.TOOL_TESTING_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Jest />} title="Jest" />
-            <VotePill image="TestingLibrary.png" title="Testing Library" />
-            <VotePill svg={<SVG.Vitest />} title="Vitest" />
+            {LIST_SVG_ICONS.TOOL_TESTING_LIST.map(
+              ({ iconSvg, iconPng, title, isPng }) =>
+                validateTagIcon({ isPng, iconPng, title, iconSvg })
+            )}
           </ul>
 
           <SectionTitle>{i18n.E2S_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Cypress />} title="Cypress" />
-            <VotePill svg={<SVG.Playwright />} title="Playwright" />
-            <VotePill svg={<SVG.Puppeteer />} title="Puppeteer" />
+            {LIST_SVG_ICONS.E2S_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.SERVICE_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Firebase />} title="Firebase" />
-            <VotePill svg={<SVG.Supabase />} title="Supabase" />
-            <VotePill svg={<SVG.Airtable />} title="Airtable" />
-            <VotePill svg={<SVG.Amplify />} title="Amplify" />
-            <VotePill svg={<SVG.MongoDB />} title="Mongo" />
+            {LIST_SVG_ICONS.SERVICE_LIST.map(({ iconSvg, title }) => (
+              <VotePill svg={iconSvg} title={title} key={title} />
+            ))}
           </ul>
 
           <SectionTitle>{i18n.CATALOG_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill image="Chakra.png" title="Chakra UI" />
-            <VotePill svg={<SVG.MaterialUI />} title="Material UI" />
-            <VotePill svg={<SVG.Next />} title="Next UI" />
-            <VotePill image="Ant.png" title="Ant Design" />
-            <VotePill svg={<SVG.DaisyUI />} title="Daisy UI" />
-            <VotePill image="ReactSemanticUI.png" title="React Semantic UI" />
+            {LIST_SVG_ICONS.CATALOG_LIST.map(
+              ({ iconSvg, iconPng, title, isPng }) =>
+                validateTagIcon({ isPng, iconPng, title, iconSvg })
+            )}
           </ul>
 
           <SectionTitle>{i18n.HOSTING_TITLE}</SectionTitle>
           <ul className="flex flex-wrap gap-4 m-auto mb-12 place-content-center">
-            <VotePill svg={<SVG.Vercel />} title="Vercel" />
-            <VotePill svg={<SVG.Netlify />} title="Netlify" />
-            <VotePill image="Render.webp" title="Render" />
-            <VotePill svg={<SVG.AWS />} title="AWS" />
-            <VotePill svg={<SVG.Azure />} title="Azure" />
-            <VotePill svg={<SVG.GoogleCloud />} title="Google Cloud" />
+            {LIST_SVG_ICONS.HOSTING_LIST.map(
+              ({ iconSvg, iconPng, title, isPng }) =>
+                validateTagIcon({ isPng, iconPng, title, iconSvg })
+            )}
           </ul>
         </div>
       </section>
