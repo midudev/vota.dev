@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
 import { VotePill } from 'components/VotePill'
 import { VoteCode } from 'components/VoteCode'
 import * as SVG from 'components/SVGIcons'
@@ -175,6 +176,7 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </section>
+      <Footer />
     </>
   )
 }

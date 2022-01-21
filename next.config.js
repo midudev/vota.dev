@@ -5,4 +5,7 @@ module.exports = {
     locales: ['en', 'es'],
     defaultLocale: 'es',
   },
+  images: {
+    domains: ['midu.dev'],
+  },
 }
