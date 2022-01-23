@@ -7,7 +7,7 @@ import { VoteCode } from 'components/VoteCode'
 import { useTranslation } from 'hooks/useTranslation'
 
 import { SectionTitle } from 'components/sectionTitle'
-import { LIST_SVG_ICONS, EXAMPLES_LIST } from './constants'
+import { LIST_SVG_ICONS, EXAMPLES_LIST } from '../constants'
 
 interface DataIconsTech {
   isPng?: boolean
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <section className="mt-32">
-        <h1 className="max-w-5xl mx-auto font-extrabold text-center text-black text-5xl md:text-8xl">
+        <h1 className="max-w-5xl mx-auto text-5xl font-extrabold text-center text-black md:text-8xl">
           {i18n.HERO_TITLE}
         </h1>
         <p className="max-w-lg mx-auto mt-10 text-2xl text-center text-black opacity-70">
@@ -42,14 +42,14 @@ const Home: NextPage = () => {
 
         <div className="max-w-4xl p-10 mx-auto my-20 bg-white border-2 border-black rounded-lg">
           <SectionTitle>{i18n.ECMA_TITLE}</SectionTitle>
-          <ul className="grid grid-cols-1 md:grid-cols-2 m-auto mb-12 place-content-center">
+          <ul className="grid grid-cols-1 m-auto mb-12 md:grid-cols-2 place-content-center">
             {EXAMPLES_LIST.map(({ image, title }) => (
               <VoteCode title={title} image={image} key={title} />
             ))}
           </ul>
 
           <SectionTitle>{i18n.UI_TITLE}</SectionTitle>
-          <ul className="grid grid-cols-1  md:grid-cols-4 gap-4 mb-12">
+          <ul className="grid grid-cols-1 gap-4 mb-12 md:grid-cols-4">
             {LIST_SVG_ICONS.UI_LIBRARY_LIST.map(({ iconSvg, title }) => (
               <VotePill svg={iconSvg} title={title} key={title} />
             ))}
