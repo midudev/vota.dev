@@ -5,11 +5,9 @@ import { Footer } from 'components/Footer'
 import { VotePill } from 'components/VotePill'
 import { VoteCode } from 'components/VoteCode'
 import { useTranslation } from 'hooks/useTranslation'
-import { LIST_SVG_ICONS, EXAMPLES_LIST } from './constants'
 
-interface SectionTitleProps {
-  children?: string
-}
+import { SectionTitle } from 'components/sectionTitle'
+import { LIST_SVG_ICONS, EXAMPLES_LIST } from './constants'
 
 interface DataIconsTech {
   isPng?: boolean
@@ -17,10 +15,6 @@ interface DataIconsTech {
   title: string
   iconSvg?: any
 }
-
-const SectionTitle = ({ children }: SectionTitleProps) => (
-  <h2 className="mb-6 text-4xl font-bold text-center">{children}</h2>
-)
 
 const Home: NextPage = () => {
   const i18n = useTranslation()
