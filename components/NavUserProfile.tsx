@@ -27,7 +27,13 @@ export function NavUserProfile({ user }: { user: Session['user'] }) {
       <div>
         <Menu.Button className="flex items-center text-sm rounded-full hover:opacity-80">
           <span className="sr-only">Abrir preferencias</span>
-          <Image className="w-8 h-8 rounded-full" src={image ?? ''} alt="" />
+          <Image
+            width={32}
+            height={32}
+            className="w-8 h-8 rounded-full"
+            src={image ?? ''}
+            alt=""
+          />
           <span className="ml-2 font-semibold">{name}</span>
           {chevronIcon}
         </Menu.Button>

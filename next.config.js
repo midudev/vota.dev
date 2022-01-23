@@ -6,6 +6,6 @@ module.exports = {
     defaultLocale: 'es',
   },
   images: {
-    domains: ['midu.dev'],
+    domains: ['midu.dev', 'avatars.githubusercontent.com'],
   },
 }

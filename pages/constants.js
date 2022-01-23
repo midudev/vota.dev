@@ -1,11 +1,12 @@
 import * as SVG from 'components/SVGIcons'
 
 export const EXAMPLES_LIST = [
-  { title: 'Nullish Coalescing Operator', image: 'es-nullish-coalescing.png' },
-  { title: 'Nullish Coalescing Operator', image: 'es-nullish-coalescing.png' },
-  { title: 'Nullish Coalescing Operator', image: 'es-nullish-coalescing.png' },
-  { title: 'Nullish Coalescing Operator', image: 'es-nullish-coalescing.png' },
-  { title: 'Nullish Coalescing Operator', image: 'es-nullish-coalescing.png' },
+  {
+    title: 'Nullish Coalescing Operator',
+    image: '/es-nullish-coalescing.png',
+    width: 300,
+    height: 300,
+  },
   // { title: 'es-optional-chaining.png' },
   // { title: 'es-top-level-await.png' },
   // { title: 'es-promise-any.png' },
@@ -58,7 +59,7 @@ export const LIST_SVG_ICONS = {
       title: 'Styled Components',
       isPng: false,
     },
-    { iconPng: 'Emotion.png', title: 'Emotion', isPng: true },
+    { iconPng: '/Emotion.png', title: 'Emotion', isPng: true },
   ],
   FRAMEWORK_CSS_LIST: [
     { iconSvg: <SVG.Tailwind />, title: 'Tailwind' },
@@ -66,7 +67,7 @@ export const LIST_SVG_ICONS = {
   ],
   TOOL_TESTING_LIST: [
     { iconSvg: <SVG.Jest />, title: 'Jest', isPng: false },
-    { iconPng: 'TestingLibrary.png', title: 'Testing Library', isPng: true },
+    { iconPng: '/TestingLibrary.png', title: 'Testing Library', isPng: true },
     { iconSvg: <SVG.Vitest />, title: 'Vitest', isPng: false },
   ],
   E2S_LIST: [
@@ -82,17 +83,21 @@ export const LIST_SVG_ICONS = {
     { iconSvg: <SVG.MongoDB />, title: 'Mongo' },
   ],
   CATALOG_LIST: [
-    { iconPng: 'Chakra.png', title: 'Chakra UI', isPng: true },
+    { iconPng: '/Chakra.png', title: 'Chakra UI', isPng: true },
     { iconSvg: <SVG.MaterialUI />, title: 'Material UI', isPng: false },
     { iconSvg: <SVG.Next />, title: 'Next UI', isPng: false },
-    { iconPng: 'Ant.png', title: 'Ant Design', isPng: true },
+    { iconPng: '/Ant.png', title: 'Ant Design', isPng: true },
     { iconSvg: <SVG.DaisyUI />, title: 'Daisy UI', isPng: false },
-    { iconPng: 'ReactSemanticUI.png', title: 'React Semantic UI', isPng: true },
+    {
+      iconPng: '/ReactSemanticUI.png',
+      title: 'React Semantic UI',
+      isPng: true,
+    },
   ],
   HOSTING_LIST: [
     { iconSvg: <SVG.Vercel />, title: 'Vercel', isPng: false },
     { iconSvg: <SVG.Netlify />, title: 'Netlify', isPng: false },
-    { iconPng: 'Render.webp', title: 'Render', isPng: true },
+    { iconPng: '/Render.webp', title: 'Render', isPng: true },
     { iconSvg: <SVG.AWS />, title: 'AWS', isPng: false },
     { iconSvg: <SVG.Azure />, title: 'Azure', isPng: false },
     { iconSvg: <SVG.GoogleCloud />, title: 'Google Cloud', isPng: false },
