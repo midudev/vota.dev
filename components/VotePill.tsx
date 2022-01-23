@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import * as SVG from 'components/SVGIcons'
+import Image from 'next/image'
 
 interface VotePillProps {
   image?: string
@@ -10,11 +11,12 @@ interface VotePillProps {
 const VotePillImage = ({ svg, title, image }: VotePillProps) => {
   if (svg) return svg
   if (image)
-    return <img className="object-contain w-10 h-10" alt={title} src={image} />
+    return (
+      <Image className="object-contain w-10 h-10" alt={title} src={image} />
+    )
 
   return <SVG.Loading className="w-6 h-6 mr-1 animate-spin place-self-center" />
 }
-
 
 export const VotePill = ({ image, title, svg }: VotePillProps) => {
   return (
