@@ -103,3 +103,21 @@ export const LIST_SVG_ICONS = {
     { iconSvg: <SVG.GoogleCloud />, title: 'Google Cloud', isPng: false },
   ],
 }
+
+export const MIDU_LINKS = [
+  {
+    title: 'GitHub',
+    link: 'https://github.com/midudev/vota.dev',
+    icon: null, // <SVG.Github className="w-6 h-6 mx-2" />,
+  },
+  {
+    title: 'YouTube',
+    link: 'https://midu.tube',
+    icon: null, // <SVG.YouTube className="w-6 h-6 mx-2" />,
+  },
+  {
+    title: 'Twitch',
+    link: 'https://midu.live',
+    icon: null, // <SVG.Twitch className="w-6 h-6 mx-2" />,
+  },
+]
