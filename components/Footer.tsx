@@ -14,8 +14,8 @@ export function Footer() {
           rel="noreferrer"
         >
           {i18n.DEVELOPED_BY}
-          {''}
-          <picture className="flex flex-center bg-white rounded-full">
+          &nbsp;
+          <picture className="flex flex-center rounded-full">
             <Image
               width="92"
               height="28"
@@ -61,6 +61,7 @@ export function Footer() {
         >
           {i18n.SUBMIT_SUGGESTION}
         </a>
+        <span>&bull;</span>
       </div>
     </footer>
   )
