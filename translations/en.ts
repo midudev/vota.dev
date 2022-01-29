@@ -18,7 +18,8 @@ export default {
   SERVICE_TITLE: 'Best BaaS (Backend as a Service)',
   CATALOG_TITLE: 'Best component catalog',
   HOSTING_TITLE: 'Best site for hosting your web project',
-  LOGIN_IN: 'log in',
+  LOGIN_IN: 'Log in',
   DEVELOPED_BY: 'Developed by',
   SUBMIT_SUGGESTION: 'Submit Suggestion',
+  LOGOUT: 'Log out',
 }

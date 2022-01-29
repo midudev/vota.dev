@@ -7,8 +7,9 @@ export function Footer() {
   return (
     <footer className="flex flex-center justify-center w-full py-12 mt-8 border-t-2 border-t-black">
       <div className="">
+        <div className='flex justify-center'>
         <a
-          className="flex flex-center pr-2 border-dashed border-b-8 border-b-yellow-js hover:border-black"
+          className="flex pr-2 border-dashed border-b-4 border-b-yellow-js hover:border-black mb-4"
           href="https://midu.dev"
           target="_blank"
           rel="noreferrer"
@@ -25,6 +26,7 @@ export function Footer() {
             />
           </picture>
         </a>
+        </div>
         <span>&bull;</span>
         <a
           className="px-1 border-dashed border-b-2 border-b-yellow-js hover:border-black"
