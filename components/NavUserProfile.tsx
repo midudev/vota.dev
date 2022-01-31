@@ -23,7 +23,7 @@ export function NavUserProfile({ user }: { user: Session['user'] }) {
 
   const handleSignOut = () => signOut()
   const i18n = useTranslation()
-  
+
   return (
     <Menu as="div" className="relative ml-3">
       <div>
