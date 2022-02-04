@@ -2,11 +2,9 @@ import { useRouter } from 'next/router'
 
 import { getFlagLocale } from '../helpers/flags'
 
-interface LocaleSwitcherProps {
-  useFlags?: boolean
-}
+const MODE = process.env.NEXT_PUBLIC_LAYOUT_LOCALE_MODE || 'text'
 
-function LocaleSwitcher({ useFlags = false }: LocaleSwitcherProps) {
+function LocaleSwitcher() {
   const router = useRouter()
   const { locales, locale, pathname, asPath, query } = router
 
@@ -27,7 +25,9 @@ function LocaleSwitcher({ useFlags = false }: LocaleSwitcherProps) {
             value={locale}
             className="flex items-center justify-center space-x-1 text-black font-bold bg-yellow-js"
           >
-            {`${useFlags ? getFlagLocale(locale) : ''} ${locale}`}
+            {MODE === 'text' && `${locale}`}
+            {MODE === 'both' && `${getFlagLocale(locale)} ${locale}`}
+            {MODE === 'flag' && `${getFlagLocale(locale)}`}
           </option>
         ))}
       </select>

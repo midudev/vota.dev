@@ -1,7 +1,8 @@
 export const getFlagLocale = (locale: string) => {
   const flagsEmojis: any = {
     es: '🇪🇸 ',
-    en: '🇺🇸/🇬🇧',
+    // en: '🇺🇸',
+    en: '🇬🇧',
   }
   return flagsEmojis[locale] || ''
 }

@@ -8,7 +8,7 @@ export function Header() {
       <Logo />
       <div className="flex flex-row items-center justify-around space-x-4">
         <NavUserOutlet />
-        <LocaleSwitcher useFlags={false} />
+        <LocaleSwitcher />
       </div>
     </header>
   )
