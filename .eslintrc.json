@@ -5,6 +5,7 @@
     "node": true
   },
   "extends": [
+    "next",
     "plugin:react/recommended",
     "standard",
     "plugin:prettier/recommended"
@@ -17,9 +18,14 @@
     "ecmaVersion": 13,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error"
-  }
+  },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
 }

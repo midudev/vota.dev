@@ -1,18 +1,16 @@
 // import NavUserProfile from 'components/NavUserProfile.jsx'
-import { IconLoading } from "assets/icons/IconLoading";
-import { LoginButton } from "components/LoginButton";
-import { signOut, useSession } from "next-auth/react";
+import { LoadingIcon } from 'components/LoadingIcon'
+import { LoginButton } from 'components/LoginButton'
+import { useSession } from 'next-auth/react'
+import { NavUserProfile } from './NavUserProfile'
 
 export function NavUserOutlet() {
   const { data: session, status } = useSession()
 
-  if (status === "loading") return  <IconLoading />
-  if (status === "unauthenticated" || session == null) return <LoginButton />
 
-  return (
-    <>
-      Signed in as {session.user?.email} <br />
-      <button onClick={() => signOut()}>Sign out</button>
-    </>
-  )
+  if (status === 'loading') return <LoadingIcon />
+  if (status === 'unauthenticated' || session == null) return <LoginButton />
+  if (session.user != null) return <NavUserProfile user={session.user} />
+
+  return null
 }
