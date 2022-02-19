@@ -21,4 +21,5 @@ export default {
   LOGIN_IN: 'Iniciar sesión',
   DEVELOPED_BY: 'Desarrollado Por',
   SUBMIT_SUGGESTION: 'Enviar Sugerencia',
+  LOGOUT: 'Cerrar sesión',
 }
