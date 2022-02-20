@@ -33,6 +33,7 @@ const SESSION = {
 const FOOTER = {
   DEVELOPED_BY: 'Desarrollado Por',
   SUBMIT_SUGGESTION: 'Enviar Sugerencia',
+  LOGOUT: 'Cerrar sesión',
 }
 
 export { SEO, MAIN_TITLE, CATEGORIES, SESSION, FOOTER }
