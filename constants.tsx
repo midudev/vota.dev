@@ -1,4 +1,14 @@
 import * as SVG from 'components/SVGIcons'
+import { ReactComponentElement } from 'react'
+
+interface PillProps {
+  [key: string]: {
+    iconSvg?: ReactComponentElement<any>
+    title: string
+    isPng?: boolean
+    iconPng?: string
+  }[]
+}
 
 export const EXAMPLES_LIST = [
   {
@@ -14,7 +24,7 @@ export const EXAMPLES_LIST = [
   // { title: 'es-logical-assignment.png' },
 ]
 
-export const LIST_SVG_ICONS = {
+export const LIST_SVG_ICONS: PillProps = {
   UI_LIBRARY_LIST: [
     { iconSvg: <SVG.ReactIcon />, title: 'React' },
     { iconSvg: <SVG.Vue />, title: 'Vue.js' },

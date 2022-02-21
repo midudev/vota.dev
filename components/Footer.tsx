@@ -6,7 +6,7 @@ export function Footer() {
 
   return (
     <footer className="flex flex-center justify-center w-full py-12 mt-8 border-t-2 border-t-black">
-      <div className="">
+      <div>
         <div className="flex justify-center">
           <a
             className="flex pr-2 border-dashed border-b-4 border-b-yellow-js hover:border-black mb-4"
@@ -14,7 +14,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            {i18n.DEVELOPED_BY}
+            {i18n.FOOTER.DEVELOPED_BY}
             &nbsp;
             <picture className="flex flex-center rounded-full">
               <Image
@@ -61,7 +61,7 @@ export function Footer() {
           rel="nofollow noreferrer"
           target="_blank"
         >
-          {i18n.SUBMIT_SUGGESTION}
+          {i18n.FOOTER.SUBMIT_SUGGESTION}
         </a>
         <span>&bull;</span>
       </div>

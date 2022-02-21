@@ -1,2 +1,2 @@
-export { default as es } from './es'
-export { default as en } from './en'
+export * as es from './es'
+export * as en from './en'
