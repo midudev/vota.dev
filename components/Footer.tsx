@@ -6,8 +6,7 @@ export function Footer() {
 
   return (
     <footer className="flex flex-center justify-center w-full py-12 mt-8 border-t-2 border-t-black">
-      <div className="">
-
+      <div>
         <div className="flex justify-center">
           <a
             className="flex pr-2 border-dashed border-b-4 border-b-yellow-js hover:border-black mb-4"
