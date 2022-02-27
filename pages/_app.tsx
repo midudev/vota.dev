@@ -8,9 +8,7 @@ function MyApp({
 }: AppProps) {
   return (
     <SessionProvider session={session}>
-      <div className="flex flex-col min-h-screen px-2 bg-yellow-js align-center">
-        <App {...pageProps} />
-      </div>
+      <App {...pageProps} />
     </SessionProvider>
   )
 }
