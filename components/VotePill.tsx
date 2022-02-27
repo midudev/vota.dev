@@ -26,7 +26,7 @@ const VotePillImage = ({ svg, title, image }: VotePillProps) => {
 export const VotePill = ({ image, title, svg }: VotePillProps) => {
   return (
     <button className="pointer group">
-      <div className="flex flex-row items-center gap-2 px-8 py-3 border border-gray-200 rounded-3xl ">
+      <div className="flex flex-row items-center gap-2 px-8 py-3 border border-gray-200 rounded-3xl hover:border-midu-light hover:scale-105">
         <figure className="relative flex object-contain w-10 h-10">
           <VotePillImage svg={svg} title={title} image={image} />
         </figure>
